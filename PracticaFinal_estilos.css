@@ -70,10 +70,37 @@ td button{
     background-color: blue;
 }
 
-/* Texto puntuación */
+/* Caja con los tres marcadores en horizontal */
+#marcadores{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+.marcador{
+    text-align: center;
+}
+.marcador h2{
+    font-size: 16px;
+    margin: 0 0 5px 0;
+}
+
+/* Texto de los marcadores numéricos */
 #letras,
+#intentos,
 #puntuacion{
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 10px;
+}
+
+/* Casilla bloqueada: ha formado parte de una palabra acertada.
+   No se puede pulsar de nuevo y se distingue visualmente. */
+td button.bloqueada{
+    background-color: mediumseagreen;
+    cursor: default;
+}
+
+/* El botón BONUS arranca oculto. Se mostrará cuando salga el dado favorable.
+   Usamos visibility (no display:none) para que no salte la maquetación. */
+#btn-bonus{
+    visibility: hidden;
 }
